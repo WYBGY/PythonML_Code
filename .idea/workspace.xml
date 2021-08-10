@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="eafcf43a-5c05-480c-9129-ceedb4f34bd1" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1osEi3lFNEt9WDa26vhltzSeFLM" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Charpter 4" />
+    <property name="settings.editor.selected.configurable" value="PyConsoleConfigurable.Python Console" />
+  </component>
+  <component name="PyConsoleOptionsProvider">
+    <option name="myPythonConsoleState">
+      <console-settings module-name="python与机器学习实战Code" is-module-sdk="true">
+        <option name="myUseModuleSdk" value="true" />
+        <option name="myModuleName" value="python与机器学习实战Code" />
+      </console-settings>
+    </option>
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\资料\python与机器学习实战Code\Charpter 4" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.Cluster">
+    <configuration name="Charpter 3" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="python与机器学习实战Code" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="D:\Python37\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Charpter 3" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Cluster" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="python与机器学习实战Code" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Charpter 3" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Charpter 3/Cluster.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.Charpter 3" />
+      <item itemvalue="Python.Cluster" />
+    </list>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="eafcf43a-5c05-480c-9129-ceedb4f34bd1" name="Default Changelist" comment="" />
+      <created>1614067021770</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1614067021770</updated>
+      <workItem from="1614067023285" duration="13855000" />
+      <workItem from="1614301268411" duration="592000" />
+      <workItem from="1614559079945" duration="7543000" />
+      <workItem from="1615972736441" duration="2721000" />
+      <workItem from="1616651131039" duration="568000" />
+      <workItem from="1617325418572" duration="587000" />
+      <workItem from="1618187821217" duration="935000" />
+      <workItem from="1618274366610" duration="595000" />
+      <workItem from="1618305587031" duration="1193000" />
+      <workItem from="1618447970140" duration="12745000" />
+      <workItem from="1621232443454" duration="1153000" />
+      <workItem from="1623135535065" duration="1481000" />
+      <workItem from="1623307812153" duration="593000" />
+      <workItem from="1624430600792" duration="592000" />
+      <workItem from="1624841789335" duration="66388000" />
+      <workItem from="1626222980966" duration="1203000" />
+      <workItem from="1626309401236" duration="662000" />
+      <workItem from="1627606298925" duration="595000" />
+      <workItem from="1627893831138" duration="8993000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="694" y="281" key="EnvironmentVariablesDialog" timestamp="1625818045136">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="694" y="281" key="EnvironmentVariablesDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1625818045136" />
+    <state x="461" y="162" key="SettingsEditor" timestamp="1625818048397">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="461" y="162" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1625818048397" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1625724238969">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1625724238969" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/pythonCode$Charpter_3.coverage" NAME="Charpter 3 Coverage Results" MODIFIED="1614587008768" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+</project>
