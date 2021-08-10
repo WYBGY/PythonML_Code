@@ -1,4 +1,5 @@
 from numpy import *
+import os
 
 
 # 先定义一些辅助函数
@@ -251,7 +252,7 @@ def loadImages(dir):
     return trainingMat, hwLabels
 
 
-dir = 'E:\资料\PythonML_Code\Charpter 5\data\\trainingDigits'
+dir = '.\data\\trainingDigits'
 
 
 def predict(dataArr, labelArr, alphas, b, kTup):
@@ -271,7 +272,7 @@ def predict(dataArr, labelArr, alphas, b, kTup):
 
 
 def testDigits(kTup=('rbf', 10)):
-    dataArr, labelArr = loadImages('E:\资料\PythonML_Code\Charpter 5\data\\trainingDigits')
+    dataArr, labelArr = loadImages('F:\自学2020\PythonML_Code\Charpter 5\data\\trainingDigits')
     b, alphas = smoP(dataArr, labelArr, 200, 0.0001, 10000, kTup)
     dataMat = mat(dataArr)
     labelMat = mat(labelArr).transpose()
@@ -285,9 +286,9 @@ def testDigits(kTup=('rbf', 10)):
         predict = kernelEval.T * multiply(labelSv, alphas[svInd]) + b
         if sign(predict) != sign(labelArr[i]):
             errorCount += 1
-    print('there are %d Support Vectors'%shape(svs)[0])
+    print('there are %d Support Vectors' % shape(svs)[0])
     print('the error rate is %f' % (errorCount / (len(labelMat))))
-    test_dataArr, test_labelArr = loadImages('E:\资料\PythonML_Code\Charpter 5\data\\testDigits')
+    test_dataArr, test_labelArr = loadImages('.\data\\testDigits')
     test_dataMat = mat(test_dataArr)
     test_labelMat = mat(test_labelArr).transpose()
     m1, n1 = shape(test_dataMat)
