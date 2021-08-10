@@ -84,7 +84,7 @@ def smo_simple(dataX, dataY, C, toler, iter_num):
 # 首先建立3个辅助函数用于对E进行缓存，以及1种用于清理代码的数据结构
 # 存储变量的数据结构
 class optStruct:
-    def __init__(self, dataX, dataY, C, toler):
+    def __init__(self, dataX, dataY, C, toler, kTup):
         self.X = dataX
         self.Y = dataY
         self.C = C
@@ -94,10 +94,13 @@ class optStruct:
         self.b = 0
         # cache第一列为有效性标志位，第二列为E值
         self.eCache = np.mat(np.zeros((self.m, 2)))
+        self.K = mat(zeros(self.m, self.m))
+        for i in range(self.m):
+            self.K[:, i] = kernelTrans(self.X, self.X[i, :], self.kTup)
 
 # 计算E值并返回，由于频繁使用单独写成一个函数
 def calcEk(oS, k):
-    fXk = float(np.multiply(oS.alphas, oS.labelMat).T * (oS.X * oS.X[k, :].T)) + oS.b
+    fXk = float(multiply(oS.alphas, oS.labelMat).T * oS.K[:, k] + oS.b)
     Ek = fXk - float(oS.labelMat[k])
     return Ek
 
@@ -144,7 +147,7 @@ def innerL(i, oS):
             H = max(oS.C, oS.alphas[i] + oS.alphas[j])
         if H == L:
             return 0
-        eta = 2.0 * oS.X[i, :] * oS.X[j, :].T - oS.X[i, :] * oS.X[i, :].T - oS.X[j, :] * oS.X[j, :].T
+        eta = 2.0 * oS.K[i, j] - oS.K[i, i], - oS.K[j, j]
         if eta >= 0:
             return 0
         oS.alphas[j] -= oS.labelMat[j] * (Ei - Ej)/eta
@@ -154,8 +157,11 @@ def innerL(i, oS):
             return 0
         oS.alphas[i] -= oS.labelMat[i] * oS.labelMat[j] * (oS.alphas[j] - alpha_J_old)
         updateEk(oS, i)
-        b1 = oS.b - Ei - oS.labelMat[i] * (oS.alphas[i] - alpha_I_old) * oS.X[i, :] * oS.X[i, :].T - oS.labelMat[j] * (oS.alphas[j] - alpha_J_old) * oS.X[i, :] * oS.X[j, :].T
-        b2 = oS.b - Ej - oS.labelMat[i] * (oS.alphas[i] - alpha_I_old) * oS.X[i, :] * oS.X[j, :].T - oS.labelMat[j] * (oS.alphas[j] - alpha_J_old) * oS.X[j, :] * oS.X[j, :].T
+
+        b1 = oS.b - Ei - oS.labelMat[i] * (oS.alphas[i] - alpha_I_old) * oS.K[i, i] - oS.labelMat[j] * (
+                    oS.alphas[j] - alpha_J_old) * oS.K[i, j]
+        b2 = oS.b - Ej - oS.labelMat[i] * (oS.alphas[i] - alpha_I_old) * oS.K[i, j] - oS.labelMat[j] * (
+                    oS.alphas[j] - alpha_J_old) * oS.K[j, j]
         if oS.alphas[i] > 0 and oS.alphas[i] < oS.C:
             oS.b = b1
         elif oS.alphas[j] > 0 and oS.alphas[j] < oS.C:
@@ -168,7 +174,7 @@ def innerL(i, oS):
 
 
 def smoP(dataX, labelMat, C, toler, maxIter, kTup=('lin', 0)):
-    oS = optStruct(mat(dataX), mat(labelMat).transpose(), C, toler)
+    oS = optStruct(mat(dataX), mat(labelMat).transpose(), C, toler, kTup)
     iter = 0
     entireSet = True
     alphaPairsChanged = 0
@@ -192,7 +198,106 @@ def smoP(dataX, labelMat, C, toler, maxIter, kTup=('lin', 0)):
     return oS.alphas, oS.b
 
 
+def calW(alphas, dataArr, classLabels):
+    X = mat(dataArr)
+    labelMat = mat(classLabels).transpose()
+    m, n = shape(X)
+    w = zeros((m, 1))
+    for i in range(m):
+        w += multiply(alphas[i] * labelMat[i], X[i, :])
+    return w
 
+
+# 首先建立计算核函数转换函数
+def kernelTrans(X, A, kTup):
+    m, n = shape(X)
+    K = mat(zeros(m, 1))
+    if kTup['0'] == 'lin':
+        K = X * A.T
+    elif kTup[0] == 'rbf':
+        for j in range(m):
+            deltaRow = X[j, :] - A
+            K[j] = deltaRow * deltaRow.T
+        K = exp(K/(-1 * kTup[1] ** 2))
+    else:
+        raise NameError('没有定义核函数')
+    return K
+
+
+def img2Vector(filename):
+    returnVec = zeros((1, 1024))
+    fr = open(filename)
+    for i in range(32):
+        lineStr = fr.readline()
+        for j in range(32):
+            returnVec[0, 32*i + j] = int(lineStr[j])
+    return returnVec
+
+
+def loadImages(dir):
+    hwLabels = []
+    trainingFileList = os.listdir(dir)
+    m = len(trainingFileList)
+    trainingMat = zeros((m, 1024))
+    for i in range(m):
+        fileNameStr = trainingFileList[i]
+        fileStr = fileNameStr.split('.')[0]
+        classNumStr = int(fileStr.split('_')[0])
+        if classNumStr == 9:
+            hwLabels.append(-1)
+        else:
+            hwLabels.append(1)
+        trainingMat[i, :] = img2Vector('%s/%s' % (dir, fileNameStr))
+    return trainingMat, hwLabels
+
+
+dir = 'E:\资料\PythonML_Code\Charpter 5\data\\trainingDigits'
+
+
+def predict(dataArr, labelArr, alphas, b, kTup):
+    dataMat = mat(dataArr)
+    labelMat = mat(labelArr).transpose()
+    svInd = nonzero(alphas.A > 0)[0]
+    svs = dataMat[svInd]
+    labelSv = labelMat[svInd]
+    m, n = shape(dataMat)
+    errorCount = 0
+    for i in range(m):
+        kernelEval = kernelTrans(svs, dataMat[i, :], kTup)
+        predict = kernelEval.T * multiply(labelSv, alphas[svInd]) + b
+        if sign(predict) != sign(labelArr[i]):
+            errorCount += 1
+    return svInd, labelSv, svs, errorCount / (len(labelMat))
+
+
+def testDigits(kTup=('rbf', 10)):
+    dataArr, labelArr = loadImages('E:\资料\PythonML_Code\Charpter 5\data\\trainingDigits')
+    b, alphas = smoP(dataArr, labelArr, 200, 0.0001, 10000, kTup)
+    dataMat = mat(dataArr)
+    labelMat = mat(labelArr).transpose()
+    svInd = nonzero(alphas.A > 0)[0]
+    svs = dataMat[svInd]
+    labelSv = labelMat[svInd]
+    m, n = shape(dataMat)
+    errorCount = 0
+    for i in range(m):
+        kernelEval = kernelTrans(svs, dataMat[i, :], kTup)
+        predict = kernelEval.T * multiply(labelSv, alphas[svInd]) + b
+        if sign(predict) != sign(labelArr[i]):
+            errorCount += 1
+    print('there are %d Support Vectors'%shape(svs)[0])
+    print('the error rate is %f' % (errorCount / (len(labelMat))))
+    test_dataArr, test_labelArr = loadImages('E:\资料\PythonML_Code\Charpter 5\data\\testDigits')
+    test_dataMat = mat(test_dataArr)
+    test_labelMat = mat(test_labelArr).transpose()
+    m1, n1 = shape(test_dataMat)
+    test_errorCount = 0
+    for i in range(m1):
+        kernelEval = kernelTrans(svs, test_dataMat[i, :], kTup)
+        predict = kernelEval.T * multiply(labelSv, alphas[svInd]) + b
+        if sign(predict) != sign(test_labelArr[i]):
+            errorCount += 1
+    print('the error rate is %f' % (test_errorCount / (len(test_labelMat))))
 
 
 
