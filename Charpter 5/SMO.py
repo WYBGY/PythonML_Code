@@ -1,5 +1,6 @@
 from numpy import *
 import os
+import numpy as np
 
 
 # 先定义一些辅助函数
@@ -87,17 +88,17 @@ def smo_simple(dataX, dataY, C, toler, iter_num):
 class optStruct:
     def __init__(self, dataX, dataY, C, toler, kTup):
         self.X = dataX
-        self.Y = dataY
+        self.labelMat = dataY
         self.C = C
         self.toler = toler
         self.m = np.shape(dataX)[0]
-        self.alphas = np.zeros((self.m, 1))
+        self.alphas = np.mat(zeros((self.m, 1)))
         self.b = 0
         # cache第一列为有效性标志位，第二列为E值
         self.eCache = np.mat(np.zeros((self.m, 2)))
-        self.K = mat(zeros(self.m, self.m))
+        self.K = mat(zeros((self.m, self.m)))
         for i in range(self.m):
-            self.K[:, i] = kernelTrans(self.X, self.X[i, :], self.kTup)
+            self.K[:, i] = kernelTrans(self.X, self.X[i, :], kTup)
 
 # 计算E值并返回，由于频繁使用单独写成一个函数
 def calcEk(oS, k):
@@ -108,7 +109,7 @@ def calcEk(oS, k):
 # 用于选择第二个α的值，保证每次优化采用最大的步长
 def select_J(i, oS, Ei):
     maxK = -1; maxDeltaE = 0; Ej = 0
-    oS.Cache[i] = [1, Ei]
+    oS.eCache[i] = [1, Ei]
     validEcacheList = nonzero(oS.eCache[:, 0].A)[0]
     if len(validEcacheList) > 1:
         for k in validEcacheList:
@@ -148,15 +149,16 @@ def innerL(i, oS):
             H = max(oS.C, oS.alphas[i] + oS.alphas[j])
         if H == L:
             return 0
-        eta = 2.0 * oS.K[i, j] - oS.K[i, i], - oS.K[j, j]
+        eta = 2.0 * oS.K[i, j] - oS.K[i, i] - oS.K[j, j]
         if eta >= 0:
             return 0
+
         oS.alphas[j] -= oS.labelMat[j] * (Ei - Ej)/eta
         oS.alphas[j] = clip_alpha(oS.alphas[j], H, L)
         updateEk(oS, j)
         if abs(oS.alphas[j] - alpha_J_old) < 0.00001:
             return 0
-        oS.alphas[i] -= oS.labelMat[i] * oS.labelMat[j] * (oS.alphas[j] - alpha_J_old)
+        oS.alphas[i] += oS.labelMat[i] * oS.labelMat[j] * (oS.alphas[j] - alpha_J_old)
         updateEk(oS, i)
 
         b1 = oS.b - Ei - oS.labelMat[i] * (oS.alphas[i] - alpha_I_old) * oS.K[i, i] - oS.labelMat[j] * (
@@ -188,7 +190,8 @@ def smoP(dataX, labelMat, C, toler, maxIter, kTup=('lin', 0)):
                 iter += 1
         # 第二种遍历非边界样本
         else:
-            nonBoundIs = nonzero((oS.alphas.A > 0) * oS.alphas.A < C)[0]
+            print((type(oS.alphas)))
+            nonBoundIs = nonzero((oS.alphas.A > 0) * (oS.alphas.A < C))[0]
             for i in nonBoundIs:
                 alphaPairsChanged += innerL(i, oS)
             iter += 1
@@ -212,8 +215,8 @@ def calW(alphas, dataArr, classLabels):
 # 首先建立计算核函数转换函数
 def kernelTrans(X, A, kTup):
     m, n = shape(X)
-    K = mat(zeros(m, 1))
-    if kTup['0'] == 'lin':
+    K = mat(zeros((m, 1)))
+    if kTup[0] == 'lin':
         K = X * A.T
     elif kTup[0] == 'rbf':
         for j in range(m):
@@ -252,8 +255,6 @@ def loadImages(dir):
     return trainingMat, hwLabels
 
 
-dir = '.\data\\trainingDigits'
-
 
 def predict(dataArr, labelArr, alphas, b, kTup):
     dataMat = mat(dataArr)
@@ -272,8 +273,8 @@ def predict(dataArr, labelArr, alphas, b, kTup):
 
 
 def testDigits(kTup=('rbf', 10)):
-    dataArr, labelArr = loadImages('F:\自学2020\PythonML_Code\Charpter 5\data\\trainingDigits')
-    b, alphas = smoP(dataArr, labelArr, 200, 0.0001, 10000, kTup)
+    dataArr, labelArr = loadImages('data\\trainingDigits')
+    alphas, b = smoP(dataArr, labelArr, 200, 0.0001, 10000, kTup)
     dataMat = mat(dataArr)
     labelMat = mat(labelArr).transpose()
     svInd = nonzero(alphas.A > 0)[0]
@@ -284,6 +285,9 @@ def testDigits(kTup=('rbf', 10)):
     for i in range(m):
         kernelEval = kernelTrans(svs, dataMat[i, :], kTup)
         predict = kernelEval.T * multiply(labelSv, alphas[svInd]) + b
+        print(predict)
+        print(labelArr[i])
+        print('------------',sign(predict), sign(labelArr[i]),'--------------------------')
         if sign(predict) != sign(labelArr[i]):
             errorCount += 1
     print('there are %d Support Vectors' % shape(svs)[0])
@@ -301,11 +305,9 @@ def testDigits(kTup=('rbf', 10)):
     print('the error rate is %f' % (test_errorCount / (len(test_labelMat))))
 
 
-
-
-
-
-
+if __name__ == '__main__':
+    dir = '.\data\\trainingDigits'
+    testDigits(kTup=('rbf', 10))
 
 
 

@@ -2,595 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eafcf43a-5c05-480c-9129-ceedb4f34bd1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/1_0.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/1_1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/1_10.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/1_11.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/1_12.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/1_13.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/1_14.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/1_15.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/1_16.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/1_17.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/1_18.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/1_19.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/1_2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/1_20.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/1_21.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/1_22.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/1_23.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/1_24.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/1_25.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/1_26.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/1_27.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/1_28.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/1_29.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/1_3.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/1_30.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/1_31.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/1_32.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/1_33.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/1_34.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/1_35.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/1_36.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/1_37.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/1_38.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/1_39.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/1_4.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/1_40.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/1_41.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/1_42.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/1_43.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/1_44.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/1_45.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/1_46.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/1_47.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/1_48.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/1_49.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/1_5.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/1_50.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/1_51.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/1_52.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/1_53.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/1_54.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/1_55.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/1_56.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/1_57.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/1_58.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/1_59.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/1_6.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/1_60.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/1_61.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/1_62.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/1_63.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/1_64.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/1_65.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/1_66.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/1_67.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/1_68.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/1_69.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/1_7.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/1_70.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/1_71.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/1_72.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/1_73.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/1_74.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/1_75.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/1_76.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/1_77.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/1_78.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/1_79.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/1_8.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/1_80.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/1_81.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/1_82.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/1_83.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/1_84.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/1_85.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/1_86.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/1_87.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/1_88.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/1_89.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/1_9.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/1_90.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/1_91.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/1_92.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/1_93.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/1_94.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/1_95.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/1_96.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/9_0.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/9_1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/9_10.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/9_11.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/9_12.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/9_13.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/9_14.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/9_15.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/9_16.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/9_17.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/9_18.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/9_19.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/9_2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/9_20.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/9_21.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/9_22.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/9_23.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/9_24.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/9_25.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/9_26.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/9_27.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/9_28.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/9_29.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/9_3.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/9_30.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/9_31.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/9_32.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/9_33.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/9_34.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/9_35.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/9_36.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/9_37.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/9_38.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/9_39.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/9_4.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/9_40.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/9_41.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/9_42.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/9_43.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/9_44.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/9_45.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/9_46.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/9_47.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/9_48.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/9_49.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/9_5.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/9_50.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/9_51.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/9_52.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/9_53.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/9_54.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/9_55.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/9_56.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/9_57.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/9_58.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/9_59.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/9_6.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/9_60.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/9_61.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/9_62.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/9_63.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/9_64.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/9_65.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/9_66.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/9_67.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/9_68.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/9_69.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/9_7.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/9_70.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/9_71.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/9_72.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/9_73.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/9_74.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/9_75.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/9_76.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/9_77.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/9_78.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/9_79.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/9_8.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/9_80.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/9_81.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/9_82.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/9_83.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/9_84.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/9_85.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/9_86.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/9_87.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/9_88.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/testDigits/9_9.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_0.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_10.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_100.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_101.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_102.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_103.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_104.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_105.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_106.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_107.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_108.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_109.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_11.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_110.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_111.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_112.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_113.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_114.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_115.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_116.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_117.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_118.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_119.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_12.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_120.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_121.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_122.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_123.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_124.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_125.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_126.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_127.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_128.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_129.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_13.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_130.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_131.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_132.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_133.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_134.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_135.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_136.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_137.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_138.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_139.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_14.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_140.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_141.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_142.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_143.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_144.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_145.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_146.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_147.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_148.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_149.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_15.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_150.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_151.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_152.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_153.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_154.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_155.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_156.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_157.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_158.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_159.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_16.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_160.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_161.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_162.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_163.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_164.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_165.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_166.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_167.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_168.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_169.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_17.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_170.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_171.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_172.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_173.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_174.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_175.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_176.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_177.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_178.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_179.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_18.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_180.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_181.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_182.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_183.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_184.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_185.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_186.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_187.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_188.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_189.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_19.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_190.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_191.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_192.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_193.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_194.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_195.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_196.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_197.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_20.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_21.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_22.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_23.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_24.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_25.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_26.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_27.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_28.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_29.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_3.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_30.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_31.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_32.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_33.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_34.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_35.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_36.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_37.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_38.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_39.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_4.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_40.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_41.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_42.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_43.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_44.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_45.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_46.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_47.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_48.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_49.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_5.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_50.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_51.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_52.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_53.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_54.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_55.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_56.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_57.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_58.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_59.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_6.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_60.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_61.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_62.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_63.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_64.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_65.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_66.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_67.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_68.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_69.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_7.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_70.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_71.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_72.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_73.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_74.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_75.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_76.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_77.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_78.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_79.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_8.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_80.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_81.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_82.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_83.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_84.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_85.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_86.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_87.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_88.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_89.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_9.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_90.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_91.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_92.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_93.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_94.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_95.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_96.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_97.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_98.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/1_99.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_0.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_10.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_100.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_101.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_102.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_103.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_104.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_105.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_106.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_107.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_108.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_109.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_11.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_110.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_111.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_112.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_113.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_114.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_115.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_116.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_117.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_118.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_119.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_12.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_120.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_121.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_122.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_123.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_124.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_125.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_126.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_127.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_128.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_129.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_13.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_130.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_131.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_132.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_133.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_134.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_135.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_136.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_137.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_138.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_139.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_14.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_140.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_141.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_142.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_143.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_144.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_145.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_146.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_147.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_148.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_149.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_15.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_150.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_151.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_152.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_153.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_154.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_155.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_156.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_157.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_158.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_159.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_16.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_160.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_161.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_162.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_163.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_164.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_165.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_166.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_167.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_168.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_169.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_17.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_170.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_171.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_172.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_173.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_174.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_175.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_176.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_177.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_178.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_179.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_18.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_180.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_181.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_182.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_183.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_184.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_185.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_186.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_187.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_188.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_189.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_19.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_190.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_191.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_192.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_193.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_194.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_195.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_196.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_197.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_198.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_199.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_20.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_200.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_201.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_202.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_203.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_21.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_22.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_23.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_24.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_25.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_26.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_27.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_28.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_29.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_3.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_30.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_31.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_32.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_33.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_34.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_35.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_36.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_37.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_38.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_39.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_4.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_40.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_41.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_42.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_43.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_44.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_45.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_46.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_47.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_48.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_49.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_5.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_50.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_51.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_52.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_53.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_54.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_55.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_56.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_57.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_58.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_59.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_6.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_60.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_61.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_62.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_63.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_64.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_65.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_66.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_67.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_68.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_69.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_7.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_70.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_71.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_72.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_73.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_74.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_75.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_76.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_77.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_78.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_79.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_8.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_80.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_81.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_82.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_83.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_84.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_85.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_86.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_87.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_88.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_89.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_9.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_90.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_91.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_92.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_93.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_94.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_95.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_96.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_97.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_98.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Charpter 5/data/trainingDigits/9_99.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Charpter 5/sklearn_svm.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Charpter 5/SMO.py" beforeDir="false" afterPath="$PROJECT_DIR$/Charpter 5/SMO.py" afterDir="false" />
     </list>
@@ -619,8 +31,8 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Charpter 5/data" />
-    <property name="settings.editor.selected.configurable" value="PyConsoleConfigurable.Python Console" />
+    <property name="last_opened_file_path" value="E:/recommendation" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -636,7 +48,7 @@
       <recent name="E:\资料\python与机器学习实战Code\Charpter 4" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.Cluster">
+  <component name="RunManager" selected="Python tests.Nosetests in SMO.py">
     <configuration name="Charpter 3" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="python与机器学习实战Code" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -681,10 +93,32 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="Nosetests in SMO.py" type="tests" factoryName="Nosetests" temporary="true" nameIsGenerated="true">
+      <module name="python与机器学习实战Code" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Charpter 5" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_regexPattern" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/Charpter 5/SMO.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Python.Charpter 3" />
       <item itemvalue="Python.Cluster" />
+      <item itemvalue="Python tests.Nosetests in SMO.py" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python tests.Nosetests in SMO.py" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -727,7 +161,7 @@
       <workItem from="1626309401236" duration="662000" />
       <workItem from="1627606298925" duration="595000" />
       <workItem from="1627893831138" duration="8993000" />
-      <workItem from="1628562207783" duration="9223000" />
+      <workItem from="1628562207783" duration="27842000" />
     </task>
     <servers />
   </component>
@@ -735,20 +169,61 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="560" y="114" key="CommitChangelistDialog2" timestamp="1628686435652">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="560" y="114" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1628686435652" />
     <state x="694" y="281" key="EnvironmentVariablesDialog" timestamp="1625818045136">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="694" y="281" key="EnvironmentVariablesDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1625818045136" />
-    <state x="461" y="162" key="SettingsEditor" timestamp="1625818048397">
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1628671676933">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="461" y="162" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1625818048397" />
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1628671676933" />
+    <state width="1877" height="266" key="GridCell.Tab.0.bottom" timestamp="1628683302985">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="266" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1628683302985" />
+    <state width="1877" height="266" key="GridCell.Tab.0.center" timestamp="1628683302985">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="266" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1628683302985" />
+    <state width="1877" height="266" key="GridCell.Tab.0.left" timestamp="1628683302985">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="266" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1628683302985" />
+    <state width="1877" height="266" key="GridCell.Tab.0.right" timestamp="1628683302985">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="266" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1628683302985" />
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1628660883227">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1628660883227" />
+    <state width="1877" height="348" key="GridCell.Tab.1.center" timestamp="1628660883226">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1628660883226" />
+    <state width="1877" height="348" key="GridCell.Tab.1.left" timestamp="1628660883226">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1628660883226" />
+    <state width="1877" height="348" key="GridCell.Tab.1.right" timestamp="1628660883226">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1628660883226" />
+    <state x="461" y="162" key="SettingsEditor" timestamp="1628681006551">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="461" y="162" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1628681006551" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1625724238969">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1625724238969" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/PythonML_Code$Nosetests_in_SMO_py.coverage" NAME="Nosetests in SMO.py Coverage Results" MODIFIED="1628670342166" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Charpter 5" />
     <SUITE FILE_PATH="coverage/pythonCode$Charpter_3.coverage" NAME="Charpter 3 Coverage Results" MODIFIED="1614587008768" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
