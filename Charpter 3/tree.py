@@ -1,7 +1,11 @@
 import math
 import numpy as np
 import matplotlib.pyplot as plt
-
+import copy
+import re
+import pandas as pd
+from sklearn.tree import DecisionTreeClassifier
+import seaborn as sns
 
 def calcShannonEnt(data):
     num = len(data)
@@ -130,9 +134,9 @@ def createPlot(inTree):
 
 def getNumLeafs(myTree):
     numLeafs = 0
-    firstStr = myTree.keys()[0]
+    firstStr = list(myTree.keys())[0]
     secondDict = myTree[firstStr]
-    for key in secondDict.keys():
+    for key in list(secondDict.keys()):
         if type(secondDict[key]).__name__ == 'dict':
             numLeafs += getNumLeafs(secondDict[key])
         else:
@@ -142,9 +146,9 @@ def getNumLeafs(myTree):
 
 def getTreeDepth(myTree):
     maxDepth = 0
-    firstStr = myTree.keys()[0]
+    firstStr = list(myTree.keys())[0]
     secondDict = myTree[firstStr]
-    for key in secondDict.keys():
+    for key in list(secondDict.keys()):
         if type(secondDict[key]).__name__ == 'dict':
             thisDepth = 1 + getTreeDepth(secondDict[key])
         else:
@@ -169,13 +173,13 @@ def plotMidText(cntrPt, parentPt, txtString):
 def plotTree(myTree, parentPt, nodeTxt):
     numLeafs = getNumLeafs(myTree)
     depth = getTreeDepth(myTree)
-    firstStr = myTree.keys()[0]
+    firstStr = list(myTree.keys())[0]
     cntrPt = (plotTree.xOff + (1.0 + float(numLeafs))/2.0/plotTree.totalW, plotTree.yOff)
     plotMidText(cntrPt, parentPt, nodeTxt)
     plotNode(firstStr, cntrPt, parentPt, decisionNode)
     secondDict = myTree[firstStr]
     plotTree.yOff = plotTree.yOff - 1.0/plotTree.totalD
-    for key in secondDict.keys():
+    for key in list(secondDict.keys()):
         if type(secondDict[key]).__name__ == 'dict':
             plotTree(secondDict[key], cntrPt, str(key))
         else:
@@ -185,6 +189,71 @@ def plotTree(myTree, parentPt, nodeTxt):
     plotTree.yOff = plotTree.yOff + 1.0/plotTree.totalD
 
 
+def classify(inputTree, featLabels, testVec):
+    # 自上而下搜索预测样本所属类别
+    firstStr = list(inputTree.keys())[0]
+    secondDict = inputTree[firstStr]
+    featIndex = featLabels.index(firstStr)
+    for key in list(secondDict.keys()):
+        # 按照特征的位置确定搜索方向
+        if testVec[featIndex] == key:
+            if type(secondDict[key]).__name__ == 'dict':
+                # 若下一级结构还是dict，递归搜索
+                classLabel = classify(secondDict[key], featLabels, testVec)
+            else:
+                classLabel = secondDict[key]
+    return classLabel
+
+
+fr = open('E:\资料\machinelearninginaction\Ch03\lenses.txt')
+lenses = [inst.strip().split('\t') for inst in fr.readlines()]
+lenses_labels = ['age', 'prescript', 'astigmatic', 'tearRate']
+lenses_Tree = creatTree(lenses, lenses_labels)
+createPlot(lenses_Tree)
+
+
+def postPruningTree(inTree, dataSet, test_data, labels):
+    """
+    :param inTree: 原始树
+    :param dataSet:数据集
+    :param test_data:测试数据，用于交叉验证
+    :param labels:标签集
+    """
+    firstStr = list(inTree.keys())[0]
+    secondDict = inTree[firstStr]
+    classList = [example[-1] for example in dataSet]
+    labelIndex = labels.index(firstStr)
+    temp_labels = copy.deepcopy(labels)
+    del (labels[labelIndex])
+    for key in list(secondDict.keys()):
+        if type(secondDict[key]).__name__ == 'dict':
+            if type(dataSet[0][labelIndex]).__name__ == 'str':
+                subDataSet = splitData(dataSet, labelIndex, key)
+                subDataTest = splitData(test_data, labelIndex, key)
+                if len(subDataTest) > 0:
+                    inTree[firstStr][key] = postPruningTree(secondDict[key], subDataSet, subDataTest, copy.deepcopy(labels))
+    if testing(inTree, test_data, temp_labels) < testingMajor(majorityCnt(classList), temp_labels):
+        return inTree
+    return majorityCnt(classList)
+
+
+def testing(myTree, data_test, labels):
+    error = 0.0
+    for i in range(len(data_test)):
+        classLabel = classify(myTree, labels, data_test[i])
+        if classLabel != data_test[i][-1]:
+            error += 1
+    return float(error)
+
+
+# 测试投票节点正确率
+def testingMajor(major, data_test):
+    error = 0.0
+    for i in range(len(data_test)):
+        if major[0] != data_test[i][-1]:
+            error += 1
+    # print 'major %d' %error
+    return float(error)
 
 
 
