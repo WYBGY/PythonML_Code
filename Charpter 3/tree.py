@@ -6,6 +6,11 @@ import re
 import pandas as pd
 from sklearn.tree import DecisionTreeClassifier
 import seaborn as sns
+sns.set(color_codes=True)
+from sklearn.model_selection import train_test_split
+from sklearn import metrics
+from sklearn.metrics import accuracy_score, f1_score, recall_score, precision_score
+import missingno as msno_plot
 
 def calcShannonEnt(data):
     num = len(data)
@@ -255,5 +260,26 @@ def testingMajor(major, data_test):
     # print 'major %d' %error
     return float(error)
 
+# 读取红酒数据
+wine_df =pd.read_csv('F:\自学2020\PythonML_Code\Charpter 3\winequality-red.csv', sep=';')
+# 查看数据， 数据有11个特征，类别为quality
+wine_df.describe().transpose().round(2)
+plt.title('Non-missing values by columns')
+msno_plot.bar(wine_df)
+# 通过箱型图查看每一列的箱型图
+plt.figure()
+pos = 1
+for i in wine_df.columns:
+    plt.subplot(3, 4, pos)
+    sns.boxplot(wine_df[i])
+    pos += 1
 
+# 处理缺失值
+columns_name = list(wine_df.columns)
+for name in columns_name:
+    q1, q2, q3 = wine_df[name].quantile([0.25, 0.5, 0.75])
+    IQR = q3 - q1
+    lower_cap = q1 - 1.5*IQR
+    upper_cap = q3 + 1.5*IQR
+    wine_df[name] = wine_df[name].apply(lambda x: upper_cap if x > upper_cap else (lower_cap if (x<lower_cap) else x))
 
