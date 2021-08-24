@@ -19,9 +19,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
+<<<<<<< Updated upstream
     <list default="true" id="eafcf43a-5c05-480c-9129-ceedb4f34bd1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
+=======
+    <list default="true" id="eafcf43a-5c05-480c-9129-ceedb4f34bd1" name="Default Changelist" comment="decision Tree add home" />
+>>>>>>> Stashed changes
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -207,11 +211,15 @@
       <workItem from="1629456221566" duration="12142000" />
 <<<<<<< Updated upstream
       <workItem from="1629513091772" duration="29641000" />
+<<<<<<< Updated upstream
       <workItem from="1629729300943" duration="2815000" />
 =======
       <workItem from="1629513091772" duration="29884000" />
       <workItem from="1629716292682" duration="699000" />
       <workItem from="1629800604138" duration="325000" />
+>>>>>>> Stashed changes
+=======
+      <workItem from="1629729300943" duration="2909000" />
 >>>>>>> Stashed changes
     </task>
     <task id="LOCAL-00001" summary="debugs and sklearn svm">
@@ -235,12 +243,21 @@
       <option name="project" value="LOCAL" />
       <updated>1629510019779</updated>
     </task>
+<<<<<<< Updated upstream
     <task id="LOCAL-00004" summary="decision Tree add">
       <created>1629716002259</created>
       <option name="number" value="00004" />
       <option name="presentableId" value="LOCAL-00004" />
       <option name="project" value="LOCAL" />
       <updated>1629716002259</updated>
+=======
+    <task id="LOCAL-00004" summary="decision Tree add home">
+      <created>1629732951593</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1629732951593</updated>
+>>>>>>> Stashed changes
     </task>
     <option name="localTasksCounter" value="5" />
     <servers />
@@ -262,8 +279,13 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="debugs and sklearn svm" />
     <MESSAGE value="decision Tree" />
+<<<<<<< Updated upstream
     <MESSAGE value="decision Tree add" />
     <option name="LAST_COMMIT_MESSAGE" value="decision Tree add" />
+=======
+    <MESSAGE value="decision Tree add home" />
+    <option name="LAST_COMMIT_MESSAGE" value="decision Tree add home" />
+>>>>>>> Stashed changes
   </component>
   <component name="WindowStateProjectService">
     <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1629514009446">

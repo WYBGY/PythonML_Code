@@ -261,7 +261,7 @@ def testingMajor(major, data_test):
     return float(error)
 
 # 读取红酒数据
-wine_df =pd.read_csv('E:\资料\PythonML_Code\Charpter 3\winequality-red.csv', sep=';')
+wine_df =pd.read_csv('F:\自学2020\PythonML_Code\Charpter 3\winequality-red.csv', sep=';')
 # 查看数据， 数据有11个特征，类别为quality
 wine_df.describe().transpose().round(2)
 plt.title('Non-missing values by columns')
@@ -286,6 +286,64 @@ for name in columns_name:
 sns.pairplot(wine_df, hue='quality')
 
 plt.figure(figsize=(10, 8))
-sns.heatmap(wine_df.corr(), annot=True, linewidths=.5, center=5, cbar=False, cmap='YlGnBu')
+sns.heatmap(wine_df.corr(), annot=True, linewidths=.5, center=0, cbar=False, cmap='YlGnBu')
+
+plt.figure(figsize=(10, 8))
+sns.countplot(wine_df['quality'])
+
+wine_df = wine_df[wine_df['quality'] != 3.5]
+wine_df = wine_df[wine_df['quality'] != 7.5]
+wine_df['quality'] = wine_df['quality'].replace(8, 7)
+wine_df['quality'] = wine_df['quality'].replace(3, 5)
+wine_df['quality'] = wine_df['quality'].replace(4, 5)
+wine_df['quality'].value_counts(normalize=True)
+
+X_train, X_test, Y_train, Y_test = train_test_split(wine_df.drop(['quality'], axis=1), wine_df['quality'], test_size=0.3, random_state=22)
+print(X_train.shape, X_test.shape)
+
+model = DecisionTreeClassifier(criterion='gini', random_state=100, max_depth=3, min_samples_leaf=5)
+"""
+criterion:度量函数，包括gini、entropy等
+class_weight:样本权重，默认为None，也可通过字典形式制定样本权重，如：假设样本中存在4个类别，可以按照 [{0: 1, 1: 1}, {0: 1, 1: 5}, 
+             {0: 1, 1: 1}, {0: 1, 1: 1}] 这样的输入形式设置4个类的权重分别为1、5、1、1，而不是 [{1:1}, {2:5}, {3:1}, {4:1}]的形式。
+             该参数还可以设置为‘balance’，此时系统会按照输入的样本数据自动的计算每个类的权重，计算公式为：n_samples/( n_classes*np.bincount(y))，
+             其中n_samples表示输入样本总数，n_classes表示输入样本中类别总数，np.bincount(y) 表示计算属于每个类的样本个数，可以看到，
+             属于某个类的样本个数越多时，该类的权重越小。若用户单独指定了每个样本的权重，且也设置了class_weight参数，则系统会将该样本单独指定
+             的权重乘以class_weight指定的其类的权重作为该样本最终的权重。
+max_depth: 设置树的最大深度，即剪枝，默认为None，通常会限制最大深度防止过拟合一般为5~20，具体视样本分布来定
+splitter: 节点划分策略，默认为best，还可以设置为random，表示最优随机划分，一般用于数据量较大时，较小运算量
+min_sample_leaf: 指定的叶子结点最小样本数，默认为1，只有划分后其左右分支上的样本个数不小于该参数指定的值时，才考虑将该结点划分也就是说，
+                 当叶子结点上的样本数小于该参数指定的值时，则该叶子节点及其兄弟节点将被剪枝。在样本数据量较大时，可以考虑增大该值，提前结束树的生长。
+random_state: 当splitter设置为random时，可以通过该参数设计随机种子数
+min_sample_split: 对一个内部节点划分时，要求该结点上的最小样本数，默认为2
+max_features: 划分节点时，所允许搜索的最大的属性个数，默认为None，auto表示最多搜索sqrt(n)个属性，log2表示最多搜索log2(n)个属性，也可以设置整数；
+min_impurity_decrease :打算划分一个内部结点时，只有当划分后不纯度(可以用criterion参数指定的度量来描述)减少值不小于该参数指定的值，才会对该
+                       结点进行划分，默认值为0。可以通过设置该参数来提前结束树的生长。
+min_impurity_split : 打算划分一个内部结点时，只有当该结点上的不纯度不小于该参数指定的值时，才会对该结点进行划分，默认值为1e-7。该参数值0.25
+                     版本之后将取消，由min_impurity_decrease代替。
+"""
+model.fit(X_train, Y_train)
+
+from sklearn.tree import export_graphviz
+from six import StringIO
+import pydotplus
+import graphviz
+from pydot import graph_from_dot_data
+from IPython.display import Image
+
+
+xvar = wine_df.drop(['quality'], axis=1)
+feature_cols = xvar.columns
+
+dot_data = StringIO()
+export_graphviz(model, out_file=dot_data, filled=True, rounded=True, special_characters=True, feature_names=feature_cols, class_names=['0', '1', '2'])
+(graph,) = graph_from_dot_data(dot_data.getvalue())
+Image(graph.create_png())
+graph.write_png(r'11111.png')
+
+dot_tree = export_graphviz(model, out_file=dot_data, filled=True, rounded=True, special_characters=True, feature_names=feature_cols, class_names=['0', '1', '2'])
+graph = graphviz.Source(dot_data)
+graph = pydotplus.graph_from_dot_data(dot_tree)
+
 
 
