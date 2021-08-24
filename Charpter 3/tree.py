@@ -261,7 +261,7 @@ def testingMajor(major, data_test):
     return float(error)
 
 # 读取红酒数据
-wine_df =pd.read_csv('F:\自学2020\PythonML_Code\Charpter 3\winequality-red.csv', sep=';')
+wine_df =pd.read_csv('E:\资料\PythonML_Code\Charpter 3\winequality-red.csv', sep=';')
 # 查看数据， 数据有11个特征，类别为quality
 wine_df.describe().transpose().round(2)
 plt.title('Non-missing values by columns')
@@ -282,4 +282,10 @@ for name in columns_name:
     lower_cap = q1 - 1.5*IQR
     upper_cap = q3 + 1.5*IQR
     wine_df[name] = wine_df[name].apply(lambda x: upper_cap if x > upper_cap else (lower_cap if (x<lower_cap) else x))
+
+sns.pairplot(wine_df, hue='quality')
+
+plt.figure(figsize=(10, 8))
+sns.heatmap(wine_df.corr(), annot=True, linewidths=.5, center=5, cbar=False, cmap='YlGnBu')
+
 

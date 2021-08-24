@@ -21,7 +21,6 @@
   <component name="ChangeListManager">
     <list default="true" id="eafcf43a-5c05-480c-9129-ceedb4f34bd1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Charpter 3/tree.py" beforeDir="false" afterPath="$PROJECT_DIR$/Charpter 3/tree.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +60,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/C4.5决策树/C4.5决策树/C45.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
   </component>
   <component name="PyConsoleOptionsProvider">
@@ -206,8 +205,14 @@
       <workItem from="1627893831138" duration="8993000" />
       <workItem from="1628562207783" duration="28989000" />
       <workItem from="1629456221566" duration="12142000" />
+<<<<<<< Updated upstream
       <workItem from="1629513091772" duration="29641000" />
       <workItem from="1629729300943" duration="2815000" />
+=======
+      <workItem from="1629513091772" duration="29884000" />
+      <workItem from="1629716292682" duration="699000" />
+      <workItem from="1629800604138" duration="325000" />
+>>>>>>> Stashed changes
     </task>
     <task id="LOCAL-00001" summary="debugs and sklearn svm">
       <created>1628686442750</created>
@@ -230,7 +235,14 @@
       <option name="project" value="LOCAL" />
       <updated>1629510019779</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="decision Tree add">
+      <created>1629716002259</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1629716002259</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -250,17 +262,22 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="debugs and sklearn svm" />
     <MESSAGE value="decision Tree" />
-    <option name="LAST_COMMIT_MESSAGE" value="decision Tree" />
+    <MESSAGE value="decision Tree add" />
+    <option name="LAST_COMMIT_MESSAGE" value="decision Tree add" />
   </component>
   <component name="WindowStateProjectService">
     <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1629514009446">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1629514009446" />
-    <state x="560" y="114" key="CommitChangelistDialog2" timestamp="1629510013732">
+    <state x="560" y="114" key="CommitChangelistDialog2" timestamp="1629715995953">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="560" y="114" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1629510013732" />
+    <state x="560" y="114" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1629715995953" />
+    <state x="184" y="92" key="DiffContextDialog" timestamp="1629800924560">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="184" y="92" key="DiffContextDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1629800924560" />
     <state x="694" y="281" key="EnvironmentVariablesDialog" timestamp="1625818045136">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -305,6 +322,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="162" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1629513897752" />
+    <state x="652" y="311" key="git4idea.merge.GitPullDialog" timestamp="1629800825594">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="652" y="311" key="git4idea.merge.GitPullDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1629800825594" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1625724238969">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
