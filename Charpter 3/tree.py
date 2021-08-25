@@ -261,7 +261,7 @@ def testingMajor(major, data_test):
     return float(error)
 
 # 读取红酒数据
-wine_df =pd.read_csv('F:\自学2020\PythonML_Code\Charpter 3\winequality-red.csv', sep=';')
+wine_df =pd.read_csv('E:\资料\PythonML_Code\Charpter 3\winequality-red.csv', sep=';')
 # 查看数据， 数据有11个特征，类别为quality
 wine_df.describe().transpose().round(2)
 plt.title('Non-missing values by columns')
@@ -339,11 +339,74 @@ dot_data = StringIO()
 export_graphviz(model, out_file=dot_data, filled=True, rounded=True, special_characters=True, feature_names=feature_cols, class_names=['0', '1', '2'])
 (graph,) = graph_from_dot_data(dot_data.getvalue())
 Image(graph.create_png())
-graph.write_png(r'11111.png')
+graph.write_png(r'E:\资料\PythonML_Code\Charpter 3\11111.png')
 
 dot_tree = export_graphviz(model, out_file=dot_data, filled=True, rounded=True, special_characters=True, feature_names=feature_cols, class_names=['0', '1', '2'])
 graph = graphviz.Source(dot_data)
 graph = pydotplus.graph_from_dot_data(dot_tree)
+
+
+test_labels = model.predict(X_test)
+train_labels = model.predict(X_train)
+print('测试集上的准确率为%s'%accuracy_score(Y_test, test_labels))
+print('训练集上的准确率为%s'%accuracy_score(Y_train, train_labels))
+
+feat_importance = model.tree_.compute_feature_importances(normalize=False)
+feat_imp_dict = dict(zip(feature_cols, model.feature_importances_))
+feat_imp = pd.DataFrame.from_dict(feat_imp_dict, orient='index')
+feat_imp.rename(columns={0: 'FeatureImportance'}, inplace=True)
+feat_imp.sort_values(by=['FeatureImportance'], ascending=False).head()
+
+path = model.cost_complexity_pruning_path(X_train, Y_train)
+ccp_alphas, impurities = path.ccp_alphas, path.impurities
+
+fig, ax = plt.figure(figsize=(16, 8))
+ax.plot(ccp_alphas[:-1], impurities[:-1], marker='o', drawstyle='steps-post')
+ax.set_xlabel('effective alpha')
+ax.set_ylabel('total impurity of leaves')
+
+# 根据不同的alpha生成不同的树并保存
+clfs = []
+for ccp_alpha in ccp_alphas:
+    clf = DecisionTreeClassifier(random_state=0, ccp_alpha=ccp_alpha)
+    clf.fit(X_train, Y_train)
+    clfs.append(clf)
+# 删去最后一个元素，因为最后只有一个节点
+clfs = clfs[:-1]
+ccp_alphas = ccp_alphas[:-1]
+
+# 查看树的总节个点数和树的深度随alpha的变化
+node_counts = [clf.tree_.node_count for clf in clfs]
+depth = [clf.tree_.max_depth for clf in clfs]
+fig, ax = plt.subplot(2, 1)
+ax[0].plot(ccp_alphas, node_counts, marker='o', drawstyle='steps-post')
+ax[0].set_xlabel('alpha')
+ax[0].set_ylabel('number of nodes')
+ax[0].set_title("Number of nodes vs alpha")
+ax[1].plot(ccp_alphas, depth, marker='o', drawstyle='steps-post')
+ax[1].set_xlabel('alpha')
+ax[1].set_ylabel('depth of Tree')
+ax[1].set_title("Depth vs alpha")
+fig.tight_layout()
+
+# 查看不同树的训练误差和测试误差变化关系
+train_scores = [clf.score(X_train, Y_train) for clf in clfs]
+test_scores = [clf.score(X_test, Y_test) for clf in clfs]
+
+fig, ax = plt.subplots()
+ax.plot(ccp_alphas, train_scores, marker='o', label='train', drawstyle='steps-post')
+ax.plot(ccp_alphas, test_scores, marker='o', label='test', drawstyle='steps-post')
+ax.set_xlabel('alpha')
+ax.set_ylabel('accuracy')
+ax.legend()
+plt.show()
+
+i = np.arange(len(ccp_alphas))
+ccp = pd.DataFrame({'Depth': pd.Series(depth, index=i), 'Node': pd.Series(node_counts, index=i),
+                    'ccp': pd.Series(ccp_alphas, index=i), 'train_scores': pd.Series(train_scores, index=i),
+                    'test_scores': pd.Series(test_scores, index=i)})
+ccp.tail()
+best = ccp[ccp['test_scores'] == ccp['test_scores'].max()]
 
 
 
