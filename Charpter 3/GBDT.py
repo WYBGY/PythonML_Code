@@ -8,7 +8,7 @@ from sklearn.model_selection import GridSearchCV
 import matplotlib.pyplot as plt
 
 
-wine_df = pd.read_csv('E:\资料\PythonML_Code\Charpter 3/winequality-red.csv', delimiter=';', encoding='utf-8')
+wine_df = pd.read_csv('F:\自学2020\PythonML_Code\Charpter 3/winequality-red.csv', delimiter=';', encoding='utf-8')
 columns_name = list(wine_df.columns)
 for name in columns_name:
     q1, q2, q3 = wine_df[name].quantile([0.25, 0.5, 0.75])
@@ -19,9 +19,14 @@ for name in columns_name:
 
 wine_df = wine_df[wine_df['quality'] != 3.5]
 wine_df = wine_df[wine_df['quality'] != 7.5]
-wine_df['quality'] = wine_df['quality'].replace(8, 7)
-wine_df['quality'] = wine_df['quality'].replace(3, 5)
-wine_df['quality'] = wine_df['quality'].replace(4, 5)
+wine_df = wine_df[wine_df['quality'] != 8]
+wine_df = wine_df[wine_df['quality'] != 3]
+wine_df = wine_df[wine_df['quality'] != 5]
+wine_df = wine_df[wine_df['quality'] != 8]
+wine_df = wine_df[wine_df['quality'] != 4]
+# wine_df['quality'] = wine_df['quality'].replace(8, 7)
+# wine_df['quality'] = wine_df['quality'].replace(3, 5)
+# wine_df['quality'] = wine_df['quality'].replace(4, 5)
 
 sns.countplot(wine_df['quality'])
 wine_df.describe()
@@ -32,11 +37,11 @@ trainX, testX, trainY, testY = train_test_split(wine_df.drop(['quality'], axis=1
 model = GradientBoostingClassifier(n_estimators=800, learning_rate=0.0125, max_depth=5, min_samples_leaf=21, min_samples_split=41, max_features=5, subsample=0.7)
 model.fit(trainX, trainY)
 print("模型在训练集上分数为%s"%model.score(trainX, trainY))
-pred_prob = model.predict_proba(trainX)
-print('AUC:', metrics.roc_auc_score(np.array(trainY), pred_prob, multi_class='ovo'))
-# validX, tX, validY, tY = train_test_split(testX, testY, test_size=0.2)
+pred_prob = model.predict_proba(trainX)[:, 1]
+print('AUC:', metrics.roc_auc_score(np.array(trainY), pred_prob))
+validX, tX, validY, tY = train_test_split(testX, testY, test_size=0.2)
 print("模型在测试集上分数为%s"%metrics.accuracy_score(validY, model.predict(validX)))
-pred_prob = model.predict_proba(validX)
+pred_prob = model.predict_proba(validX)[:, 1]
 print('AUC test:', metrics.roc_auc_score(np.array(validY), pred_prob, multi_class='ovo'))
 
 
