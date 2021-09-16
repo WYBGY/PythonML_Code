@@ -29,7 +29,6 @@ for i in range(8):
     sns.countplot(x=train_data.iloc[:, i])
 
 train_data['Sex'].replace('male', 0, inplace=True)
-train_data['Sex'].replace('female', 1, inplace=True)
 test_data['Sex'].replace('male', 0, inplace=True)
 test_data['Sex'].replace('female', 1, inplace=True)
 
