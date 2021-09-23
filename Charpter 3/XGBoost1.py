@@ -103,7 +103,6 @@ gsearch = GridSearchCV(estimator=model4, param_grid={'learning_rate': [0.2, 0.5,
 gsearch.fit(trainX, trainy)
 
 
-
 model3 = xgb.XGBClassifier(learning_rate=0.01, n_estimators=300, max_depth=5, min_child_weight=1, gamma=0.7, subsample=0.7,
                            objective='binary:logistic', random_state=1, silent=False)
 
