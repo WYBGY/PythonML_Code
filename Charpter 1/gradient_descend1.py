@@ -7,6 +7,7 @@ from mpl_toolkits.mplot3d import Axes3D
 from matplotlib import animation
 from matplotlib.colors import LogNorm
 from autograd import elementwise_grad, value_and_grad
+import random
 
 data_x = load_boston()['data']
 labels = load_boston()['target']
@@ -32,7 +33,7 @@ def gd(x, y, w, b):
     return grad_w, grad_b, loss
 
 
-eta = 0.000001
+eta = 0.001
 w_list = []
 b_list = []
 loss_list = []
@@ -124,4 +125,53 @@ ax.plot(b_list, w_list, loss_list, 'o-', ms=3, lw=1.5, color='black')
 
 
 def sgd(x, y, w, b):
-    pass
+    idx = random.randint(0, len(x)-1)
+    select_x = x[idx]
+    select_y = y[idx]
+    hypo = 2 * (select_y - (np.dot(w, select_x) + b))
+    grad_w = -np.dot(hypo, select_x)
+    grad_b = -hypo
+    loss = (np.sum((y.reshape(m) - (np.dot(w, x.T) + b)) ** 2))/len(x)
+    return grad_w, grad_b, loss
+
+
+eta = 0.001
+w_list = []
+b_list = []
+loss_list = []
+for i in range(0, 10000):
+    grad_w, grad_b, loss = sgd(data_x, labels, w, b)
+    w = w - eta * grad_w
+    w_list.append(w)
+    b = b - eta * grad_b
+    b_list.append(b)
+    loss_list.append(loss)
+    print(i, loss)
+
+
+# adagrad
+def adagrad(x, y, w, b, grad_w_list, grad_b_list):
+
+    grad_w, grad_b, loss = gd(x, y, w, b)
+
+    if len(grad_w_list) == 0:
+        sum_grad_w = 0
+        sum_grad_b = 0
+    else:
+        sum_grad_w = 0
+        sum_grad_b = 0
+        for i in range(len(grad_w_list)):
+            sum_grad_w += grad_w_list[i] ** 2
+            sum_grad_b += grad_b_list[i] ** 2
+eta = 0.001
+w_list = []
+b_list = []
+loss_list = []
+for i in range(0, 10000):
+    grad_w, grad_b, loss = sgd(data_x, labels, w, b)
+    w = w - eta * grad_w
+    w_list.append(w)
+    b = b - eta * grad_b
+    b_list.append(b)
+    loss_list.append(loss)
+    print(i, loss)
