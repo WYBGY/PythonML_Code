@@ -175,3 +175,4 @@ for i in range(0, 10000):
     b_list.append(b)
     loss_list.append(loss)
     print(i, loss)
+111
