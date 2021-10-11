@@ -163,16 +163,27 @@ def adagrad(x, y, w, b, grad_w_list, grad_b_list):
         for i in range(len(grad_w_list)):
             sum_grad_w += grad_w_list[i] ** 2
             sum_grad_b += grad_b_list[i] ** 2
+
+    sum_grad_w = sum_grad_w + grad_w**2
+    sum_grad_b = sum_grad_b + grad_b**2
+    delta_w = grad_w/np.sqrt(sum_grad_w)
+    delta_b = grad_b/np.sqrt(sum_grad_b)
+    return delta_w, delta_b, grad_w, grad_b, loss
+
+
 eta = 0.001
 w_list = []
+grad_w_list = []
 b_list = []
+grad_b_list = []
 loss_list = []
 for i in range(0, 10000):
-    grad_w, grad_b, loss = sgd(data_x, labels, w, b)
-    w = w - eta * grad_w
+    delta_w, delta_b, grad_w, grad_b, loss = adagrad(data_x, labels, w, b, grad_w_list, grad_b_list)
+    w = w - eta * delta_w
     w_list.append(w)
-    b = b - eta * grad_b
+    grad_w_list.append(grad_w)
+    b = b - eta * delta_b
     b_list.append(b)
+    grad_b_list.append(grad_b)
     loss_list.append(loss)
     print(i, loss)
-111
