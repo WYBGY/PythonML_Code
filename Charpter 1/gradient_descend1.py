@@ -170,14 +170,15 @@ def adagrad(x, y, w, b, grad_w_list, grad_b_list):
     delta_b = grad_b/np.sqrt(sum_grad_b)
     return delta_w, delta_b, grad_w, grad_b, loss
 
-
-eta = 0.001
+w = np.array([0] * n)
+b = 0
+eta = 1
 w_list = []
 grad_w_list = []
 b_list = []
 grad_b_list = []
 loss_list = []
-for i in range(0, 10000):
+for i in range(0, 5000):
     delta_w, delta_b, grad_w, grad_b, loss = adagrad(data_x, labels, w, b, grad_w_list, grad_b_list)
     w = w - eta * delta_w
     w_list.append(w)
@@ -185,5 +186,69 @@ for i in range(0, 10000):
     b = b - eta * delta_b
     b_list.append(b)
     grad_b_list.append(grad_b)
+    loss_list.append(loss)
+    print(i, loss)
+
+
+def momentum(lamda, eta, w_v_list, b_v_list, grad_w_list, grad_b_list):
+    if len(w_v_list) == 0:
+        w_v = 0
+        b_v = 0
+    else:
+        w_v = lamda * w_v_list[-1] - eta * grad_w_list[-1]
+        b_v = lamda * b_v_list[-1] - eta * grad_b_list[-1]
+    return w_v, b_v
+
+
+w = np.array([0] * n)
+b = 0
+eta = 1
+lamda = 0.01
+w_list = []
+grad_w_list = []
+b_list = []
+grad_b_list = []
+loss_list = []
+w_v_list = []
+b_v_list = []
+for i in range(0, 5000):
+    grad_w, grad_b, loss = gd(data_x, labels, w, b)
+    w_v, b_v = momentum(lamda, eta, w_v_list, b_v_list, grad_w_list, grad_b_list)
+    grad_w_list.append(grad_w)
+    grad_b_list.append(grad_b)
+    w += w_v
+    b += b_v
+    loss_list.append(loss)
+    print(i, loss)
+
+
+def rmsprop(x, y, w, b, sigma_w_list, sigma_b_list, alpha):
+    grad_w, grad_b, loss = gd(x, y, w, b)
+    if len(sigma_w_list) == 0:
+        sigma_w = grad_w
+        sigma_b = grad_b
+    else:
+        sigma_w = np.sqrt(alpha * sigma_w_list[-1] ** 2 + (1 - alpha) * grad_w ** 2)
+        sigma_b = np.sqrt(alpha * sigma_b_list[-1] ** 2 + (1 - alpha) * grad_b ** 2)
+    return sigma_w, sigma_b, grad_w, grad_b, loss
+
+
+w = np.array([0] * n)
+b = 0
+eta = 1
+alpha = 0.9
+w_list = []
+sigma_w_list = []
+b_list = []
+sigma_b_list = []
+loss_list = []
+for i in range(0, 5000):
+    sigma_w, sigma_b, grad_w, grad_b, loss = rmsprop(data_x, labels, w, b, sigma_w_list, sigma_b_list, alpha)
+    w = w - eta * grad_w/sigma_w
+    w_list.append(w)
+    sigma_w_list.append(grad_w)
+    b = b - eta * grad_b/sigma_b
+    b_list.append(b)
+    sigma_b_list.append(grad_b)
     loss_list.append(loss)
     print(i, loss)
