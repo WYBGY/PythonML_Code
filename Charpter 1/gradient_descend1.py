@@ -33,7 +33,7 @@ def gd(x, y, w, b):
     return grad_w, grad_b, loss
 
 
-eta = 0.001
+eta = 0.05
 w_list = []
 b_list = []
 loss_list = []
@@ -195,14 +195,14 @@ def momentum(lamda, eta, w_v_list, b_v_list, grad_w_list, grad_b_list):
         w_v = 0
         b_v = 0
     else:
-        w_v = lamda * w_v_list[-1] - eta * grad_w_list[-1]
-        b_v = lamda * b_v_list[-1] - eta * grad_b_list[-1]
+        w_v = lamda * w_v_list[-1] + eta * grad_w_list[-1]
+        b_v = lamda * b_v_list[-1] + eta * grad_b_list[-1]
     return w_v, b_v
 
 
 w = np.array([0] * n)
 b = 0
-eta = 1
+eta = 0.01
 lamda = 0.01
 w_list = []
 grad_w_list = []
@@ -211,14 +211,18 @@ grad_b_list = []
 loss_list = []
 w_v_list = []
 b_v_list = []
-for i in range(0, 5000):
+for i in range(0, 10000):
     grad_w, grad_b, loss = gd(data_x, labels, w, b)
     w_v, b_v = momentum(lamda, eta, w_v_list, b_v_list, grad_w_list, grad_b_list)
     grad_w_list.append(grad_w)
     grad_b_list.append(grad_b)
-    w += w_v
-    b += b_v
+    w = w - w_v
+    b = b - b_v
     loss_list.append(loss)
+    w_v_list.append(w_v)
+    b_v_list.append(b_v)
+    w_list.append(w)
+    b_list.append(b)
     print(i, loss)
 
 
@@ -235,20 +239,20 @@ def rmsprop(x, y, w, b, sigma_w_list, sigma_b_list, alpha):
 
 w = np.array([0] * n)
 b = 0
-eta = 1
+eta = 0.001
 alpha = 0.9
 w_list = []
 sigma_w_list = []
 b_list = []
 sigma_b_list = []
 loss_list = []
-for i in range(0, 5000):
+for i in range(0, 10000):
     sigma_w, sigma_b, grad_w, grad_b, loss = rmsprop(data_x, labels, w, b, sigma_w_list, sigma_b_list, alpha)
     w = w - eta * grad_w/sigma_w
     w_list.append(w)
-    sigma_w_list.append(grad_w)
+    sigma_w_list.append(sigma_w)
     b = b - eta * grad_b/sigma_b
     b_list.append(b)
-    sigma_b_list.append(grad_b)
+    sigma_b_list.append(sigma_b)
     loss_list.append(loss)
     print(i, loss)
