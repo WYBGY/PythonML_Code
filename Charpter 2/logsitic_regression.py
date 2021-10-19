@@ -1,14 +1,15 @@
 import numpy as np
 from keras.utils import to_categorical
 from sklearn.preprocessing import LabelEncoder
-from sklearn.preprocessing import OneHotEncoder
 import pandas as pd
 import matplotlib.pyplot as plt
+from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
 
 data = pd.read_csv('./train.csv', encoding='utf-8')
 data = data[data['native_country'] != ' ?']
 none_scalar = ['workclass', 'education', 'marital_status', 'occupation', 'relationship', 'race', 'sex', 'native_country']
+# 使用labelEncoder方法将非数值型数据转化为数值型数据，在前面使用的是replace直接替代的
 label_encoder = LabelEncoder()
 income = label_encoder.fit_transform(np.array(list(data['income'])))
 data['income'] = income
@@ -35,17 +36,20 @@ for i in range(len(data)):
 data_set = np.array(data_set)
 np.random.shuffle(data_set)
 
-test_set = data_set[int(len(data_set) * 0.7):, :]
-train_set = data_set[:int(len(data_set)*0.7), :]
+trainX, testX, trainY, testY = train_test_split(data_set[:, :-1], data_set[:, -1], test_size=0.3)
 
-trainX = train_set[:, :-1]
-trainX = (trainX - np.mean(trainX, axis=0))/np.std(trainX, axis=0)
-trainY = train_set[:, -1]
-
-testX = test_set[:, :-1]
-test_std = np.array([1e-8 if example == 0 else example for example in list(np.std(testX, axis=0))])
-testX_normal = (testX - np.mean(testX, axis=0))/test_std
-testY = test_set[:, -1]
+# test_set = data_set[int(len(data_set) * 0.7):, :]
+# train_set = data_set[:int(len(data_set)*0.7), :]
+#
+#
+# trainX = train_set[:, :-1]
+# trainX = (trainX - np.mean(trainX, axis=0))/np.std(trainX, axis=0)
+# trainY = train_set[:, -1]
+#
+# testX = test_set[:, :-1]
+# test_std = np.array([1e-8 if example == 0 else example for example in list(np.std(testX, axis=0))])
+# testX_normal = (testX - np.mean(testX, axis=0))/test_std
+# testY = test_set[:, -1]
 
 def _shuffle(trainx, trainy):
     randomlist = np.arange(np.shape(trainx)[0])
