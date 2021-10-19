@@ -33,16 +33,16 @@ def gd(x, y, w, b):
     return grad_w, grad_b, loss
 
 
-eta = 0.05
+eta = 0.001
 w_list = []
 b_list = []
 loss_list = []
 for i in range(0, 10000):
+    w_list.append(w)
+    b_list.append(b)
     grad_w, grad_b, loss = gd(data_x, labels, w, b)
     w = w - eta * grad_w
-    w_list.append(w)
     b = b - eta * grad_b
-    b_list.append(b)
     loss_list.append(loss)
     print(i, loss)
 
@@ -179,12 +179,13 @@ b_list = []
 grad_b_list = []
 loss_list = []
 for i in range(0, 5000):
+    w_list.append(w)
+    b_list.append(b)
     delta_w, delta_b, grad_w, grad_b, loss = adagrad(data_x, labels, w, b, grad_w_list, grad_b_list)
     w = w - eta * delta_w
-    w_list.append(w)
     grad_w_list.append(grad_w)
     b = b - eta * delta_b
-    b_list.append(b)
+
     grad_b_list.append(grad_b)
     loss_list.append(loss)
     print(i, loss)
