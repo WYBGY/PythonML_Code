@@ -80,3 +80,20 @@ def train(trainx, trainy):
         cost_list.append(total_loss)
         print("epoch:", i)
     return w, cost_list
+
+def evaluation2(X, Y, w):
+    X = np.concatenate((np.ones((np.shape(X)[0], 1)), X), axis=1)
+    y = np.dot(X, w)
+    y = np.array([1 if example > 0.5 else 0 for example in list(y)])
+    error_count = 0
+    for i in range(len(y)):
+        if y[i] != Y[i]:
+            error_count += 1
+
+    error_rate = error_count/len(y)
+    return error_rate
+
+
+w, cost_list = train(trainX, trainY)
+error_rate2 = evaluation2(trainX, trainY, w)
+plt.plot(list(range(5, 10000)), cost_list[5:])
