@@ -24,7 +24,32 @@ def plot_digit(data):
     plt.imshow(image, cmap=mpl.cm.binary, interpolation="nearest")
     plt.axis("off")
 
-def
+
+def plot_digits(instances,images_per_row=10,**options):
+    size=28
+    # 每一行有一个
+    image_pre_row=min(len(instances),images_per_row)
+    images=[instances.reshape(size,size) for instances in instances]
+#     有几行
+    n_rows=(len(instances)-1) // image_pre_row+1
+    row_images=[]
+    n_empty=n_rows*image_pre_row-len(instances)
+    images.append(np.zeros((size,size*n_empty)))
+    for row in range(n_rows):
+        # 每一次添加一行
+        rimages=images[row*image_pre_row:(row+1)*image_pre_row]
+        # 对添加的每一行的额图片左右连接
+        row_images.append(np.concatenate(rimages,axis=1))
+    # 对添加的每一列图片 上下连接
+    image=np.concatenate(row_images,axis=0)
+    plt.imshow(image,cmap=mpl.cm.binary,**options)
+    plt.axis("off")
+    plt.figure(figsize=(9,9))
+    ###
+example_images=np.r_[X[:12000:600],X[13000:30600:600],X[30600:60000:590]]
+plot_digits(example_images,images_per_row=10)
+plt.show()
+
 
 
 some_digit = data_x[0]
