@@ -257,3 +257,5 @@ for i in range(0, 10000):
     sigma_b_list.append(sigma_b)
     loss_list.append(loss)
     print(i, loss)
+
+
