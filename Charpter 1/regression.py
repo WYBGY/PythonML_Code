@@ -32,6 +32,16 @@ def lwlr(testpoint, x, y, k=1.0):
     return testpoint * ws
 
 
+def lwlrTest(testArr, x, y, k=1.0):
+    m = shape(testArr)[0]
+    yHat = zeros((m))
+    for i in range(m):
+        yHat[i] = lwlr(testArr[i], x, y, k)
+    return yHat
+
+
+
+
 
 
 
