@@ -31,6 +31,11 @@ model.add(Activation('sigmoid'))
 model.add(Dense(units=500))
 model.add(Activation('sigmoid'))
 
+for i in range(8):
+    model.add(Dense(units=500))
+    model.add(Activation('sigmoid'))
+
+
 model.add(Dense(units=10))
 model.add(Activation('softmax'))
 
