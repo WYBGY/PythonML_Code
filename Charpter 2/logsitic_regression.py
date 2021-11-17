@@ -1,12 +1,12 @@
 import numpy as np
 from keras.utils import to_categorical
-from sklearn.preprocessing import LabelEncoder
+from sklearn.preprocessing import LabelEncoder, MinMaxScaler
 import pandas as pd
 import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
 
-data = pd.read_csv('./train.csv', encoding='utf-8')
+data = pd.read_csv('E:\资料\PythonML_Code\Charpter 2/train.csv', encoding='utf-8')
 data = data[data['native_country'] != ' ?']
 none_scalar = ['workclass', 'education', 'marital_status', 'occupation', 'relationship', 'race', 'sex', 'native_country']
 # 使用labelEncoder方法将非数值型数据转化为数值型数据，在前面使用的是replace直接替代的
@@ -18,8 +18,8 @@ for key in none_scalar:
     temp_data = np.array(list(data[key]))
     label_encoder = LabelEncoder()
     integer_encoded = label_encoder.fit_transform(temp_data)
-    onehot_encoded = to_categorical(integer_encoded)
-    onehot_encoded_dic[key] = onehot_encoded
+    # onehot_encoded = to_categorical(integer_encoded)
+    onehot_encoded_dic[key] = integer_encoded
 
 feature_list = data.columns.to_list()
 
@@ -28,7 +28,7 @@ for i in range(len(data)):
     temp_vector = []
     for j in range(len(feature_list)):
         if feature_list[j] in onehot_encoded_dic.keys():
-            temp_vector.extend(onehot_encoded_dic[feature_list[j]][i])
+            temp_vector.append(onehot_encoded_dic[feature_list[j]][i])
         else:
             temp_vector.append(data.iloc[i, j])
     data_set.append(temp_vector)
@@ -36,7 +36,14 @@ for i in range(len(data)):
 data_set = np.array(data_set)
 np.random.shuffle(data_set)
 
-trainX, testX, trainY, testY = train_test_split(data_set[:, :-1], data_set[:, -1], test_size=0.3)
+X = data_set[:, :-1]
+Y = data_set[:, -1]
+
+min_max = MinMaxScaler()
+min_max_X = min_max.fit_transform(X)
+
+data_set[:, :-1] = (data_set[:, :-1] - np.min(data_set[:, :-1], axis=0))/(np.max(data_set[:, :-1], axis=0) - np.min(data_set[:, :-1], axis=0))
+trainX, testX, trainY, testY = train_test_split(X, Y, test_size=0.3)
 
 # test_set = data_set[int(len(data_set) * 0.7):, :]
 # train_set = data_set[:int(len(data_set)*0.7), :]
@@ -61,6 +68,7 @@ def sigmoid(z):
     return np.clip(res, 1e-8, (1-(1e-8)))
 
 def train(trainx, trainy):
+    # 这里将b也放进了w中，便于求解，只需要求解w的梯度即可
     trainx = np.concatenate((np.ones((np.shape(trainx)[0], 1)), trainx), axis=1)
     epoch = 300
     batch_size = 32
@@ -97,7 +105,13 @@ def evaluation2(X, Y, w):
     error_rate = error_count/len(y)
     return error_rate
 
-
 w, cost_list = train(trainX, trainY)
 error_rate2 = evaluation2(trainX, trainY, w)
+print('训练集上的错误率为：', error_rate2)
+print('测试集上的错误率为：', evaluation2(testX, testY, w))
 plt.plot(list(range(5, 10000)), cost_list[5:])
+
+model = LogisticRegression(penalty='l1', solver='liblinear')
+model.fit(trainX, trainY)
+print('训练集上的错误率为：', model.score(trainX, trainY))
+print('测试集上的错误率为：', model.score(testX, testY))
