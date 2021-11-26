@@ -92,6 +92,46 @@ for idx in error_idx[:30]:
 
 plot_digits(example_images, image_per_row=10)
 
+from keras.layers import Convolution2D, MaxPooling2D, Flatten
+
+data_x, data_y = fetch_openml('mnist_784', version=1, return_X_y=True)
+
+x = []
+for i in range(len(data_x)):
+    tmp = data_x.iloc[i, :].tolist()
+    tmp = np.array(tmp).reshape((28, 28, 1))
+    x.append(tmp)
+x = np.array(x)
+
+one_hot = OneHotEncoder()
+data_y = one_hot.fit_transform(np.array(data_y).reshape(data_y.shape[0], 1)).toarray()
+train_x, test_x, train_y, test_y = train_test_split(x, data_y)
+
+model2 = Sequential()
+
+model2.add(Convolution2D(25, 3, 3, input_shape=(28, 28, 1)))
+
+model2.add(MaxPooling2D((2, 2)))
+
+model2.add(Convolution2D(50, 3, 3))
+
+model2.add(MaxPooling2D((2, 2)))
+
+model2.add(Flatten())
+model2.add(Dense(units=100))
+model2.add(Activation('relu'))
+model2.add(Dense(units=100))
+model2.add(Activation('relu'))
+model2.add(Dense(units=10))
+
+model2.add(Activation('softmax'))
+
+model2.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
+
+model2.fit(train_x, train_y, batch_size=300, epochs=20)
+score = model2.evaluate(test_x, test_y)
+print('total loss on testing data', score[0])
+print('accuracy on testing data', score[1])
 
 
 
