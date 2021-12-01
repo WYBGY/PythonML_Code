@@ -151,3 +151,69 @@ plt.scatter(dataSet[:, :-1].T.tolist()[0], dataSet[:, -1].T.tolist()[0])
 model_tree = creat_tree(dataSet, leafType=modelLeaf, errType=modelErr)
 
 
+def regTreeEval(model, inDat):
+    return float(model)
+
+
+def modelTreeEval(model, inDat):
+    n = shape(inDat)[0]
+    X = mat(ones((1, n+1)))
+    X[:, 1:n+1] = inDat
+    return float(X*model)
+
+
+def treeForecast(tree, inData, modelEval=regTreeEval):
+    if not is_Tree(tree):
+        return modelEval(tree, inData)
+    if inData[tree['spInd']] > tree['spVal']:
+        if is_Tree(tree['left']):
+            return treeForecast(tree['left'], inData, modelEval)
+        else:
+            return modelTreeEval(tree['left'], inData)
+    else:
+        if is_Tree(tree['right']):
+            return treeForecast(tree['right'], inData, modelEval)
+        else:
+            return modelTreeEval(tree['right'], inData)
+
+
+def createForcast(tree, testData, modelEval=regTreeEval):
+    m = len(testData)
+    yHat = mat(zeros((m, 1)))
+    for i in range(m):
+        yHat[i, 0] = treeForecast(tree, mat(testData[i]), modelEval)
+    return yHat
+
+
+
+from tkinter import *
+
+
+def reDraw(tolS, tolN):
+    pass
+
+
+def drawNewTree():
+    pass
+
+
+root = Tk()
+Label(root, text='tolN').grid(row=1, column=0)
+tolNentry = Entry(root)
+tolNentry.grid(row=1, column=1)
+tolNentry.insert(0, '10')
+Label(root, text='tolS').grid(row=2, column=0)
+tolSentry = Entry(root)
+tolSentry.grid(row=2, column=1)
+tolSentry.insert(0, '1.0')
+Button(root, text='ReDraw', command=drawNewTree).grid(row=1, column=2, rowspan=3)
+
+chkBtnVar = IntVar()
+chkBtn = Checkbutton(root, text='Model Tree', variable=chkBtnVar)
+chkBtn.grid(row=3, column=0, columnspan=3)
+
+reDraw.rawDat = mat(loadDataSet('sine.txt'))
+reDraw.testDat = arange(min(reDraw.rawDat[:, 0]), max(reDraw.rawDat[:, 0]), 0.01)
+reDraw(1.0, 10)
+root.mainloop()
+
