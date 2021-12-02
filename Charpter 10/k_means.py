@@ -76,3 +76,10 @@ plt.scatter(data_2[:, 0].A[:, 0], data_2[:, 1].A[:, 0])
 plt.plot(centroids[2, 0], centroids[2, 1], '*', markersize=30)
 
 
+def find_best_cluster_num(sse):
+    s = preprocessing.MinMaxScaler()
+    sse_min_max_scalar = s.fit_transform(np.mat(sse).transpose())
+    diff_sse = np.diff(sse_min_max_scalar.reshape(len(sse_min_max_scalar)), 1)
+    descend_v = [(diff_sse[i - 1] / diff_sse[i]) for i in range(1, len(diff_sse) - 1)]
+    best_idx = np.argmax(descend_v) + 2
+    return best_idx
