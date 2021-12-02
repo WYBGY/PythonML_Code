@@ -59,8 +59,8 @@ def loadData(filename):
     return mat(data_mat)
 
 
-data = loadData('E:\资料\PythonML_Code\Charpter 10\\testSet.txt')
-centroids, cluster_ass = Kmeans(data, 3, dis_meas=cal_dist, create_center=rand_center)
+data = loadData('F:\自学2020\PythonML_Code\Charpter 10\\testSet.txt')
+centroids, cluster_ass = Kmeans(data, 4, dis_meas=cal_dist, create_center=rand_center)
 
 import matplotlib.pyplot as plt
 
@@ -68,12 +68,16 @@ import matplotlib.pyplot as plt
 data_0 = data[nonzero(cluster_ass[:, 0].A == 0)[0]]
 data_1 = data[nonzero(cluster_ass[:, 0].A == 1)[0]]
 data_2 = data[nonzero(cluster_ass[:, 0].A == 2)[0]]
+data_3 = data[nonzero(cluster_ass[:, 0].A == 3)[0]]
 plt.scatter(data_0[:, 0].A[:, 0], data_0[:, 1].A[:, 0])
-plt.plot(centroids[0, 0], centroids[0, 1], '*', markersize=30)
+plt.plot(centroids[0, 0], centroids[0, 1], '*', markersize=20)
 plt.scatter(data_1[:, 0].A[:, 0], data_1[:, 1].A[:, 0])
-plt.plot(centroids[1, 0], centroids[1, 1], '*', markersize=30)
+plt.plot(centroids[1, 0], centroids[1, 1], '*', markersize=20)
 plt.scatter(data_2[:, 0].A[:, 0], data_2[:, 1].A[:, 0])
-plt.plot(centroids[2, 0], centroids[2, 1], '*', markersize=30)
+plt.plot(centroids[2, 0], centroids[2, 1], '*', markersize=20)
+plt.scatter(data_3[:, 0].A[:, 0], data_3[:, 1].A[:, 0])
+plt.plot(centroids[3, 0], centroids[3, 1], '*', markersize=20)
+
 
 
 def find_best_cluster_num(sse):
@@ -83,3 +87,46 @@ def find_best_cluster_num(sse):
     descend_v = [(diff_sse[i - 1] / diff_sse[i]) for i in range(1, len(diff_sse) - 1)]
     best_idx = np.argmax(descend_v) + 2
     return best_idx
+
+
+def bi_kmeans(data, k, dist_measure=cal_dist):
+    m = shape(data)[0]
+    cluster_ass = mat(zeros((m, 2)))
+    # 初始化聚类中心，此时聚类中心只有一个，因此对数据取平均
+    centroid0 = mean(data, axis=0).tolist()[0]
+    # 存储每个簇的聚类中心的列表
+    centList = [centroid0]
+    for j in range(m):
+        cluster_ass[j, 1] = dist_measure(mat(centroid0), data[j, :]) ** 2
+
+    while (len(centList)) < k:
+        lowestSSE = inf
+        for i in range(len(centList)):
+            # 在当前簇中的样本点
+            point_in_current_cluster = data[nonzero(cluster_ass[:, 0].A == i)[0], :]
+            # 在当前簇运用kmeans算法，分为两个簇，返回簇的聚类中心和每个样本点距离其所属簇的中心的距离
+            centroid_mat, split_cluster_ass = Kmeans(point_in_current_cluster, 2, dist_measure)
+            # 计算被划分的簇，划分后的损失
+            sse_split = sum(split_cluster_ass[:, 1])
+            # 计算没有被划分的其它簇的损失
+            sse_not_split = sum(cluster_ass[nonzero(cluster_ass[:, 0].A != i)[0], 1])
+            # 选择最小的损失的簇，对其进行划分
+            if sse_split + sse_not_split < lowestSSE:
+                # 第i个簇被划分
+                best_cent_to_split = i
+                # 第i个簇被划分后的聚类中心
+                best_new_centers = centroid_mat
+                # 第i个簇的样本，距离划分后所属的类别（只有0和1）以及距离聚类中心的距离
+                best_cluster_ass = split_cluster_ass
+                lowestSSE = sse_split + sse_not_split
+        #
+        best_cluster_ass[nonzero(best_cluster_ass[:, 0].A == 1)[0], 0] = len(centList)
+        best_cluster_ass[nonzero(best_cluster_ass[:, 0].A == 0)[0], 0] = best_cent_to_split
+
+        centList[best_cent_to_split] = best_new_centers[0, :]
+        centList.append(best_new_centers[1, :])
+        cluster_ass[nonzero(cluster_ass[:, 0].A == best_cent_to_split[0]), :] = best_cluster_ass
+
+    return mat(centList), cluster_ass
+
+
