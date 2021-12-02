@@ -3,7 +3,7 @@ from numpy import *
 
 # 定义距离计算
 def cal_dist(vect_a, vect_b):
-    return sqrt(sum(power(vect_a, vect_b, 2)))
+    return sqrt(sum(power(vect_a - vect_b, 2)))
 
 
 # 随机选取聚类中心
@@ -31,7 +31,7 @@ def Kmeans(data, k, dis_meas=cal_dist, create_center=rand_center):
             min_dist = inf
             min_index = -1
             for j in range(k):
-                dist_ij = dis_meas(data[i, :], centroids[j, :])
+                dist_ij = dis_meas(array(data[i, :]), array(centroids[j, :]))
                 if dist_ij < min_dist:
                     min_dist = dist_ij
                     min_index = j
@@ -58,5 +58,21 @@ def loadData(filename):
         data_mat.append(flt_line)
     return mat(data_mat)
 
+
+data = loadData('E:\资料\PythonML_Code\Charpter 10\\testSet.txt')
+centroids, cluster_ass = Kmeans(data, 3, dis_meas=cal_dist, create_center=rand_center)
+
+import matplotlib.pyplot as plt
+
+
+data_0 = data[nonzero(cluster_ass[:, 0].A == 0)[0]]
+data_1 = data[nonzero(cluster_ass[:, 0].A == 1)[0]]
+data_2 = data[nonzero(cluster_ass[:, 0].A == 2)[0]]
+plt.scatter(data_0[:, 0].A[:, 0], data_0[:, 1].A[:, 0])
+plt.plot(centroids[0, 0], centroids[0, 1], '*', markersize=30)
+plt.scatter(data_1[:, 0].A[:, 0], data_1[:, 1].A[:, 0])
+plt.plot(centroids[1, 0], centroids[1, 1], '*', markersize=30)
+plt.scatter(data_2[:, 0].A[:, 0], data_2[:, 1].A[:, 0])
+plt.plot(centroids[2, 0], centroids[2, 1], '*', markersize=30)
 
 
