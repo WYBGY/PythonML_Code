@@ -97,6 +97,8 @@ sk = cluster.AgglomerativeClustering(4)
 sk.fit(iris.data)
 print(sk.labels_)
 
+https://github.com/hongweipeng/learn_ai_example/blob/master/hierarchical_example.py
+
 
 
 
