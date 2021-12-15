@@ -119,12 +119,15 @@ def bi_kmeans(data, k, dist_measure=cal_dist):
                 # 第i个簇的样本，距离划分后所属的类别（只有0和1）以及距离聚类中心的距离
                 best_cluster_ass = split_cluster_ass
                 lowestSSE = sse_split + sse_not_split
-        #
+        # 把新划分出来的簇，属于1类的簇重新进行编号，编号为原先的总类别数目，比如原先有两类，选择一个进行划分后，又分成两类，等于1的那一类编号为2
         best_cluster_ass[nonzero(best_cluster_ass[:, 0].A == 1)[0], 0] = len(centList)
+        # 同理，属于第0类的重新编号，编号为所选的那一类的编号
         best_cluster_ass[nonzero(best_cluster_ass[:, 0].A == 0)[0], 0] = best_cent_to_split
-
+        # 将原来的聚类中心进行替换
         centList[best_cent_to_split] = best_new_centers[0, :]
+        # 并加入新的1类的聚类中心
         centList.append(best_new_centers[1, :])
+        # 将之前被选到划分的那一类的结果全部替换成被划分后的结果
         cluster_ass[nonzero(cluster_ass[:, 0].A == best_cent_to_split[0]), :] = best_cluster_ass
 
     return mat(centList), cluster_ass
@@ -166,10 +169,13 @@ def mass_place_find(filename):
         time.sleep(1)
     fw.close()
 
+from sklearn.cluster import KMeans
+from yellowbrick.cluster.elbow import kelbow_visualizer
+from yellowbrick.datasets.loaders import load_nfl
 
+x, y = load_nfl()
 
-
-
+kelbow_visualizer(KMeans(random_state=4), x, k=(2, 10))
 
 
 
