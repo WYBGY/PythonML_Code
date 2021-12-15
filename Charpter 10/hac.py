@@ -1,5 +1,4 @@
 import math
-
 import numpy as np
 
 
@@ -132,7 +131,7 @@ plt.scatter(data_3_[:, 0], data_3_[:, 1])
 from sklearn.cluster import AgglomerativeClustering
 from sklearn.preprocessing import MinMaxScaler
 model = AgglomerativeClustering(n_clusters=4, affinity='euclidean', memory=None, connectivity=None,
-                                compute_full_tree='auto', linkage='ward', pooling_func='deprecated')
+                                compute_full_tree='auto', linkage='ward')
 """
 参数：
     n_cluster: 聚类数目
@@ -154,7 +153,7 @@ model = AgglomerativeClustering(n_clusters=4, affinity='euclidean', memory=None,
 data_array = np.array(load_iris().data[:50, :])
 min_max_scalar = MinMaxScaler()
 data_scalar = min_max_scalar.fit_transform(data_array)
-model.fit(min_max_scalar)
+model.fit(data_scalar)
 
 
 from scipy.cluster.hierarchy import linkage, dendrogram
@@ -164,5 +163,4 @@ p = dendrogram(Z, 0)
 plt.show()
 
 
-DBSCAN: https://blog.csdn.net/hansome_hong/article/details/107596543
 
