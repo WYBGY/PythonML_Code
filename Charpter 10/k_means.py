@@ -99,7 +99,7 @@ def bi_kmeans(data, k, dist_measure=cal_dist):
     for j in range(m):
         cluster_ass[j, 1] = dist_measure(mat(centroid0), data[j, :]) ** 2
 
-    while (len(centList)) < k:
+    while len(centList) < k:
         lowestSSE = inf
         for i in range(len(centList)):
             # 在当前簇中的样本点
@@ -128,5 +128,50 @@ def bi_kmeans(data, k, dist_measure=cal_dist):
         cluster_ass[nonzero(cluster_ass[:, 0].A == best_cent_to_split[0]), :] = best_cluster_ass
 
     return mat(centList), cluster_ass
+
+
+import urllib
+import urllib.parse
+import urllib.request
+import json
+
+
+def geo_grab(stAdress, city):
+    api = "http://where.yahooapis.com/geocode?"
+    params = {}
+    params['flags'] = 'J'
+    params['appid'] = 'ppp68N8t'
+    params['location'] = '%s %s'% (stAdress, city)
+    url_params = urllib.parse.urlencode(params)
+    yahooApi = api + url_params
+    print(yahooApi)
+    c = urllib.request.urlopen(yahooApi)
+    return json.loads(c.read())
+
+
+import time
+def mass_place_find(filename):
+    fw = open('places.txt', 'w')
+    for line in open(filename).readlines():
+        line = line.strip()
+        line_arr = line.split('\t')
+        ret_dict = geo_grab(line_arr[1], line_arr[2])
+        if ret_dict['ResultSet']['Error'] == 0:
+            lat = float(ret_dict['ResultSet']['Result'][0]['latitude'])
+            lng = float(ret_dict['ResultSet']['Result'][0]['longitude'])
+            print('%s\t%f\t%f' % (line_arr[0], lat, lng))
+            fw.write('%s\t%f\t%f\n' % (line, lat, lng))
+        else:
+            print('error fetching')
+        time.sleep(1)
+    fw.close()
+
+
+
+
+
+
+
+
 
 
