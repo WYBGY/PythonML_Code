@@ -78,7 +78,7 @@ ax[2].scatter(my_kpca[y2==1, 0],  my_kpca[y2 == 1, 1], color='blue', marker='o',
 
 model = KernelPCA(n_components=2, kernel='rbf', gamma=15)
 kpca_x = model.fit_transform(x2)
-ax[3].scatter(kpca_x[y2==0, 0],  kpca_x[y2 == 0, 1], color='red', marker='^', alpha=0.5)
-ax[3].scatter(kpca_x[y2==1, 0],  kpca_x[y2 == 1, 1], color='blue', marker='o', alpha=0.5)
+ax[3].scatter(kpca_x[y2 == 0, 0],  kpca_x[y2 == 0, 1], color='red', marker='^', alpha=0.5)
+ax[3].scatter(kpca_x[y2 == 1, 0],  kpca_x[y2 == 1, 1], color='blue', marker='o', alpha=0.5)
 
 
